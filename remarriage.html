@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remarriage Profiles</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+body{
+    background:#f5f6f8;
+    font-family:'Segoe UI',sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* TOP NAVBAR */
+.top-navbar{
+    height:70px;
+    background:linear-gradient(90deg,#7a0000,#b30000);
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:relative;
+    z-index:9999;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.site-logo{
+    width:62px;
+    height:62px;
+    object-fit:contain;
+    filter:drop-shadow(0 0 6px rgba(255,215,0,0.8));
+}
+
+.logo-circle{
+    width:35px;
+    height:35px;
+    background:gold;
+    color:#b30000;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    margin-right:8px;
+}
+
+.logo-title{
+    color:#ffd700;
+    font-size:22px;
+    font-weight:800;
+    white-space:nowrap;
+}
+
+.lang-select{
+    background:#7a0000;
+    color:#ffd700;
+    border:1px solid #ffd700;
+    border-radius:6px;
+    padding:5px 8px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.menu-section{
+    display:flex;
+    gap:22px;
+}
+
+.menu-section a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+}
+
+.menu-toggle{
+    display:none;
+    color:white;
+    font-size:26px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero-banner{
+    height:240px;
+    background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('images/marathi.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-overlay h1{
+    color:white;
+    font-size:48px;
+    font-weight:700;
+}
+
+.hero-overlay p{
+    color:white;
+    font-size:18px;
+}
+
+/* MAIN */
+.main{
+    max-width:1050px;
+    margin:0 auto;
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    padding:30px 20px;
+    flex:1;
+}
+
+/* DESKTOP FILTER */
+.filter-box{
+    width:230px;
+    min-width:230px;
+    background:#fff;
+    padding:18px;
+    border-radius:8px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.10);
+}
+
+.range-box{
+    display:flex;
+    justify-content:space-between;
+    font-size:12px;
+    color:#b71c3b;
+}
+
+.form-range{
+    accent-color:#b71c3b;
+}
+
+/* MOBILE FILTER DEFAULT HIDE */
+.mobile-filter{
+    display:none;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3, 260px);
+    gap:55px;
+    justify-content:flex-start;
+    width:100%;
+}
+.profile-card{
+    width:260px;
+    max-width:260px;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.profile-card:hover{
+    transform:translateY(-8px);
+}
+
+.profile-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    background:#f2f2f2;
+}
+
+.card-body{
+    padding:15px;
+}
+
+.card-body p{
+    margin:3px 0;
+    font-size:14px;
+}
+
+/* FOOTER */
+.footer-section{
+    background:#b30000;
+    color:white;
+    text-align:center;
+    padding:15px;
+    font-size:14px;
+    width:100%;
+    margin-top:auto;
+}
+
+/* MOBILE VIEW ONLY */
+@media(max-width:768px){
+
+    .top-navbar{
+        height:70px;
+        padding:8px 12px;
+    }
+
+    .site-logo{
+        width:52px;
+        height:52px;
+    }
+
+    .logo-title{
+        font-size:15px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .menu-section{
+        display:none;
+        position:absolute;
+        top:63px;
+        left:0;
+        width:100%;
+        background:white;
+        flex-direction:column;
+        gap:0;
+        z-index:9999;
+        box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .menu-section.active{
+        display:flex;
+    }
+
+    .menu-section a{
+        color:#7a0000;
+        padding:15px;
+        text-align:center;
+        border-bottom:1px solid #ddd;
+        font-weight:700;
+    }
+
+    .hero-banner{
+        height:160px;
+    }
+
+    .hero-overlay h1{
+        font-size:26px;
+    }
+
+    .hero-overlay p{
+        font-size:14px;
+    }
+
+    .main{
+        width:100%;
+        max-width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+        padding:20px 12px;
+    }
+
+    .mobile-filter{
+        width:100%;
+        max-width:300px;
+        margin:0 auto 12px auto;
+        overflow:visible;
+    }
+
+    .mobile-filter-content{
+        width:100%;
+        max-width:300px;
+        overflow:hidden;
+    }
+
+    .mobile-filter-content select{
+        width:100%;
+        max-width:100%;
+        height:38px;
+        font-size:13px;
+        border-radius:6px;
+    }
+
+    .mobile-filter-content select:focus{
+        outline:none;
+        box-shadow:none;
+    }
+
+    .cards{
+        width:100%;
+        display:grid;
+        grid-template-columns:1fr;
+        justify-items:center;
+        gap:18px;
+    }
+
+    .mobile-filter-btn{
+        width:100%;
+        height:42px;
+        background:#fff;
+        border:1px solid #e5e5e5;
+        border-radius:8px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:0 14px;
+        font-size:14px;
+        font-weight:600;
+        color:#555;
+        cursor:pointer;
+        box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .mobile-filter-content{
+        display:none;
+        background:#fff;
+        padding:14px;
+        margin-top:8px;
+        border-radius:10px;
+        border:1px solid #eee;
+        box-shadow:0 5px 15px rgba(0,0,0,0.12);
+    }
+
+    .mobile-filter-content.active{
+        display:block !important;
+    }
+
+    .mobile-filter-content h5{
+        font-size:15px;
+        color:#b30000;
+        font-weight:700;
+        margin-bottom:12px;
+    }
+
+    .mobile-filter-content label{
+        font-size:13px;
+        font-weight:600;
+        margin-bottom:4px;
+        color:#333;
+    }
+
+    .mobile-filter-content select{
+        height:38px;
+        font-size:13px;
+        border-radius:6px;
+    }
+
+.desktop-filter{
+        display:none !important;
+    }
+
+    .cards{
+        width:100%;
+        display:grid;
+        grid-template-columns:1fr;
+        justify-items:center;
+        gap:18px;
+    }
+
+    .profile-card{
+        width:250px;
+        max-width:250px;
+        background:#fff;
+        border-radius:10px;
+        overflow:hidden;
+        box-shadow:0 3px 12px rgba(0,0,0,0.10);
+    }
+
+    .profile-card img{
+        width:100%;
+        height:280px;
+        object-fit:cover;
+    }
+
+    .card-body{
+        padding:14px;
+    }
+
+    .card-body h4{
+        font-size:22px;
+    }
+
+    .card-body p{
+        font-size:13px;
+        margin-bottom:4px;
+    }
+
+    .btn-success{
+        width:100%;
+        border-radius:8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-navbar">
+
+    <div class="logo-section">
+        <img src="images/ganpati.png" class="site-logo" alt="Ganpati Logo">
+        <div class="logo-title">आनंदी वधुवर सूचक</div>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="menu-section">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="bridepage.html">Bride</a>
+        <a href="groompage.html">Groom</a>
+        <a href="remarriage.html">Remarriage</a>
+        <a href="contact.html">Contact us</a>
+    </div>
+
+</div>
+
+
+<div class="hero-banner">
+    <div class="hero-overlay">
+        <h1>Remarriage Profiles</h1>
+        <p>विश्वास, संस्कार आणि सुंदर नात्यांची सुरुवात</p>
+    </div>
+</div>
+
+<div class="main">
+
+    <!-- MOBILE FILTER -->
+    <div class="mobile-filter">
+       <button type="button" class="mobile-filter-btn" onclick="toggleMobileFilter()">
+
+    <span>
+        <i class="fa fa-filter"></i> Filters
+    </span>
+
+    <span id="filterArrow">
+        <i class="fa fa-chevron-down"></i>
+    </span>
+
+</button>
+
+        <div class="mobile-filter-content" id="mobileFilterContent">
+            <h5>Filters</h5>
+
+            <label>Education</label>
+            <select id="mobileEdu" class="form-select mb-3">
+                <option value="">All</option>
+                <option value="Graduate">Graduate</option>
+                <option value="Diploma">Diploma</option>
+                <option value="Master">Master</option>
+                <option value="PhD">PhD</option>
+                <option value="M.sc">M.sc</option>
+                <option value="B.sc">B.sc</option>
+                <option value="BCA">BCA</option>
+                <option value="MBA">MBA</option>
+                <option value="Engineer">Engineer</option>
+                <option value="12th">12th</option>
+                <option value="10th">10th</option>
+            </select>
+
+            <label>Height</label>
+
+<select id="mobileHeight" class="form-select mb-3">
+    <option value="">All</option>
+
+    <option value="4.0">4.0 ft</option>
+    <option value="4.1">4.1 ft</option>
+    <option value="4.2">4.2 ft</option>
+    <option value="4.3">4.3 ft</option>
+    <option value="4.4">4.4 ft</option>
+    <option value="4.5">4.5 ft</option>
+    <option value="4.6">4.6 ft</option>
+    <option value="4.7">4.7 ft</option>
+    <option value="4.8">4.8 ft</option>
+    <option value="4.9">4.9 ft</option>
+
+    <option value="5.0">5.0 ft</option>
+    <option value="5.1">5.1 ft</option>
+    <option value="5.2">5.2 ft</option>
+    <option value="5.3">5.3 ft</option>
+    <option value="5.4">5.4 ft</option>
+    <option value="5.5">5.5 ft</option>
+    <option value="5.6">5.6 ft</option>
+    <option value="5.7">5.7 ft</option>
+    <option value="5.8">5.8 ft</option>
+    <option value="5.9">5.9 ft</option>
+
+    <option value="6.0">6.0 ft</option>
+    <option value="6.1">6.1 ft</option>
+    <option value="6.2">6.2 ft</option>
+    <option value="6.3">6.3 ft</option>
+    <option value="6.4">6.4 ft</option>
+    <option value="6.5">6.5 ft</option>
+</select>
+
+            <label>Caste</label>
+            <select id="mobileCaste" class="form-select mb-3">
+                <option value="">All</option>
+                <option value="Maratha">Maratha</option>
+                <option value="Brahmin">Brahmin</option>
+                <option value="Vaishya Vani">Vaishya Vani</option>
+                <option value="Lingyat">Lingyat</option>
+                <option value="Dhangar">Dhangar</option>
+                <option value="Sutar">Sutar</option>
+            </select>
+
+            <label>Age Range</label>
+            <div class="range-box">
+                <span>20</span>
+                <span>66</span>
+            </div>
+            <input type="range" class="form-range mb-3">
+
+            <button class="btn btn-secondary w-100 mt-2" onclick="resetMobileFilter()">Reset</button>
+        </div>
+    </div>
+
+    <!-- DESKTOP FILTER -->
+    <div class="filter-box desktop-filter">
+        <h5>Filters</h5>
+
+        <label>Education</label>
+        <select id="edu" class="form-select mb-3">
+            <option value="">All</option>
+            <option value="Graduate">Graduate</option>
+            <option value="Diploma">Diploma</option>
+            <option value="Master">Master</option>
+            <option value="PhD">PhD</option>
+            <option value="M.sc">M.sc</option>
+            <option value="B.sc">B.sc</option>
+            <option value="BCA">BCA</option>
+            <option value="MBA">MBA</option>
+            <option value="Engineer">Engineer</option>
+            <option value="12th">12th</option>
+            <option value="10th">10th</option>
+        </select>
+
+       <label>Height</label>
+
+<select id="height" class="form-select mb-3">
+    <option value="">All</option>
+
+    <option value="4.0">4.0 ft</option>
+    <option value="4.1">4.1 ft</option>
+    <option value="4.2">4.2 ft</option>
+    <option value="4.3">4.3 ft</option>
+    <option value="4.4">4.4 ft</option>
+    <option value="4.5">4.5 ft</option>
+    <option value="4.6">4.6 ft</option>
+    <option value="4.7">4.7 ft</option>
+    <option value="4.8">4.8 ft</option>
+    <option value="4.9">4.9 ft</option>
+
+    <option value="5.0">5.0 ft</option>
+    <option value="5.1">5.1 ft</option>
+    <option value="5.2">5.2 ft</option>
+    <option value="5.3">5.3 ft</option>
+    <option value="5.4">5.4 ft</option>
+    <option value="5.5">5.5 ft</option>
+    <option value="5.6">5.6 ft</option>
+    <option value="5.7">5.7 ft</option>
+    <option value="5.8">5.8 ft</option>
+    <option value="5.9">5.9 ft</option>
+
+    <option value="6.0">6.0 ft</option>
+    <option value="6.1">6.1 ft</option>
+    <option value="6.2">6.2 ft</option>
+    <option value="6.3">6.3 ft</option>
+    <option value="6.4">6.4 ft</option>
+    <option value="6.5">6.5 ft</option>
+</select>
+        
+
+        <label>Caste</label>
+        <select id="caste" class="form-select mb-3">
+            <option value="">All</option>
+            <option value="Maratha">Maratha</option>
+            <option value="Brahmin">Brahmin</option>
+            <option value="Vaishya Vani">Vaishya Vani</option>
+            <option value="Lingyat">Lingyat</option>
+            <option value="Dhangar">Dhangar</option>
+            <option value="Sutar">Sutar</option>
+        </select>
+
+        <label>Age Range</label>
+        <div class="range-box">
+            <span>20</span>
+            <span>66</span>
+        </div>
+        <input type="range" class="form-range mb-3">
+
+        <button class="btn btn-secondary w-100 mt-3" onclick="resetFilter()">Reset</button>
+    </div>
+
+    <!-- PROFILES -->
+    <div class="cards" id="profiles"></div>
+
+</div>
+
+<footer class="footer-section">
+    © 2026 आनंदी वधुवर सूचक | All Rights Reserved
+</footer>
+
+<script>
+function toggleMenu(){
+    document.querySelector(".menu-section").classList.toggle("active");
+}
+
+function toggleMobileFilter(){
+    const filter = document.getElementById("mobileFilterContent");
+    const arrow = document.getElementById("filterArrow");
+
+    filter.classList.toggle("active");
+
+    arrow.innerHTML = filter.classList.contains("active")
+        ? '<i class="fa fa-chevron-up"></i>'
+        : '<i class="fa fa-chevron-down"></i>';
+}
+
+function sendWhatsApp(reg, name){
+    var phone = "917558319213";
+
+    var message =
+        "आनंदी वधुवर सूचक\n\n" +
+        "मला खालील प्रोफाईलची माहिती हवी आहे:\n" +
+        "नोंदणी क्रमांक: " + reg + "\n" +
+        "नाव: " + name;
+
+    var url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+}
+
+function normalizeHeight(value){
+    if(!value) return "";
+
+    let h = value.toString().toLowerCase().trim();
+
+    h = h.replace("feet", "")
+         .replace("foot", "")
+         .replace("ft", "")
+         .replace("f", "")
+         .replace("inch", "")
+         .replace("inches", "")
+         .replace("'", ".")
+         .replace("’", ".")
+         .replace('"', "")
+         .replace(/\s+/g, "");
+
+    if(h.includes(".")){
+        let parts = h.split(".");
+        return parts[0] + "." + parts[1];
+    }
+
+    return h;
+}
+
+function getBirthYear(item){
+    if(item.birthyear) return item.birthyear;
+    if(item.birthYear) return item.birthYear;
+    if(item.dob){
+        const d = new Date(item.dob);
+        return isNaN(d.getTime()) ? "" : d.getFullYear();
+    }
+    if(item.dateofbirth){
+        const d = new Date(item.dateofbirth);
+        return isNaN(d.getTime()) ? "" : d.getFullYear();
+    }
+    return "";
+}
+
+function getPhotoUrl(item){
+
+    let photo = item.photo || item.Photo || item.cloudinaryUrl || item.cloudinaryurl || item.profilepic || item.profilepicpath || "";
+
+    if(!photo){
+        return "images/no-photo.jpg";
+    }
+
+    photo = photo.toString().trim();
+
+    // ✅ Cloudinary URL direct use
+    if(photo.includes("res.cloudinary.com")){
+        return photo.replace("/image/upload/", "/image/upload/f_auto,q_auto,w_600/");
+    }
+
+    // ✅ Google user content fallback
+    if(photo.includes("googleusercontent.com")){
+        return photo;
+    }
+
+    let fileId = item.photoId || "";
+
+    if(!fileId){
+
+        if(photo.includes("id=")){
+            fileId = photo.split("id=")[1].split("&")[0];
+        }
+        else if(photo.includes("/d/")){
+            fileId = photo.split("/d/")[1].split("/")[0];
+        }
+        else{
+            let match = photo.match(/[-\w]{25,}/);
+            if(match){
+                fileId = match[0];
+            }
+        }
+    }
+
+    if(fileId){
+        return "https://lh3.googleusercontent.com/d/" + fileId + "=w600";
+    }
+
+    return photo;
+}
+
+function resetFilter(){
+    document.getElementById("edu").value = "";
+    document.getElementById("caste").value = "";
+    document.getElementById("height").value = "";
+    applyFilters();
+}
+
+function resetMobileFilter(){
+    document.getElementById("mobileEdu").value = "";
+    document.getElementById("mobileCaste").value = "";
+    document.getElementById("mobileHeight").value = "";
+    applyFilters();
+}
+
+// GOOGLE SHEET DATA
+fetch("https://script.google.com/macros/s/AKfycbyCAjXGsA_M0XfCXryr-Psn9BSK-GE1ytEq2d8h16ZWDDa3lpVBQ0BMJU3YS94k79gu/exec")
+.then(res => res.json())
+.then(data => {
+
+    let html = "";
+
+    data.forEach(item => {
+
+        const remarriage = (item.remarriage || item.Remarriage || "").toString().toLowerCase().trim();
+
+        if(remarriage === "yes" || remarriage === "हो" || remarriage.includes("yes")){
+
+            const arn = item.arn || "";
+            const name = item.name || "";
+            const education = item.education || "";
+            const height = item.height || "";
+            const caste = item.caste || "";
+            const birthyear = getBirthYear(item);
+            const photo = getPhotoUrl(item);
+
+            html += `
+                <div class="profile-card"
+                    data-edu="${education}"
+                    data-caste="${caste}"
+                    data-height="${normalizeHeight(height)}">
+
+                   <img src="${photo}"  alt="${name}" loading="lazy"
+     decoding="async"
+     referrerpolicy="no-referrer"
+     onerror="this.onerror=null; this.src='images/no-photo.jpg';">
+                    <div class="card-body">
+                        <h6 style="color:#b71c3b;font-weight:600;">${arn}</h6>
+
+                        <h4 style="margin-top:10px;color:black;font-weight:600;">
+                            ${name}
+                        </h4>
+
+                        <p><b>Education:</b> ${education}</p>
+                        <p><b>Height:</b> ${height}</p>
+                        <p><b>Caste:</b> ${caste}</p>
+                        <p><b>Type:</b> Remarriage</p>
+                    <p><b>Birth Year:</b> ${birthyear}</p>
+
+                        <button class="btn btn-success mt-2"
+                            onclick="sendWhatsApp('${arn}','${name}')">
+                            WhatsApp
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+    });
+
+    document.getElementById("profiles").innerHTML = html;
+
+    setupFilters();
+})
+.catch(error => {
+    console.error("Data loading error:", error);
+});
+
+function setupFilters(){
+    ["edu", "caste", "height", "mobileEdu", "mobileCaste", "mobileHeight"].forEach(id => {
+        const el = document.getElementById(id);
+
+        if(el){
+            el.addEventListener("change", function(){
+                applyFilters();
+
+                if(id.startsWith("mobile")){
+                    const filter = document.getElementById("mobileFilterContent");
+                    const arrow = document.getElementById("filterArrow");
+
+                    filter.classList.remove("active");
+
+                    if(arrow){
+                        arrow.innerHTML = '<i class="fa fa-chevron-down"></i>';
+                    }
+                }
+            });
+        }
+    });
+}
+
+function applyFilters(){
+
+    const edu = document.getElementById("edu")?.value || document.getElementById("mobileEdu")?.value || "";
+    const caste = document.getElementById("caste")?.value || document.getElementById("mobileCaste")?.value || "";
+    const height = document.getElementById("height")?.value || document.getElementById("mobileHeight")?.value || "";
+
+    document.querySelectorAll(".profile-card").forEach(card => {
+
+        const cardEdu = (card.dataset.edu || "").toLowerCase();
+        const cardCaste = (card.dataset.caste || "").toLowerCase();
+        const cardHeight = card.dataset.height || "";
+
+        let show = true;
+
+        if(edu && !cardEdu.includes(edu.toLowerCase())) show = false;
+        if(caste && !cardCaste.includes(caste.toLowerCase())) show = false;
+        if(height && cardHeight !== height) show = false;
+
+        card.style.display = show ? "block" : "none";
+    });
+}
+</script>
+
+</body>
+</html>

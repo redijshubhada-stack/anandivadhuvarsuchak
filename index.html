@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>आनंदी वधुवर सूचक</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+html, html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+    height:70px;
+    background:linear-gradient(90deg,#7a0000,#b30000);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:9999;
+     overflow:visible;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    overflow:visible;
+    gap:2px;
+}
+
+.site-logo{
+    width:85px;
+    height:85px;
+    object-fit:contain;
+    display:block;
+    filter: drop-shadow(0 0 6px rgba(255,215,0,0.6));
+    object-position:center;
+    display:block;
+    transform:scale(1.3);
+    filter:drop-shadow(0 0 6px rgba(255,215,0,0.8));
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+}
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
+
+.title{
+    color:#ffd700;
+    font-size:25px;
+    font-weight:800;
+    white-space:nowrap;
+}
+
+
+.menu{
+    display:flex;
+    gap:25px;
+    margin-right:40px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#ffd700;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+.lang-select{
+    background:#7a0000;
+    color:#ffd700;
+    border:1px solid #ffd700;
+    border-radius:6px;
+    padding:6px 10px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    outline:none;
+}
+
+.lang-select option{
+    background:#7a0000;
+    color:#ffd700;
+}
+
+/* HERO */
+
+.banner{
+    min-height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.70)),
+    url('images/marathi.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px 60px;
+}
+
+.banner h1{
+    color:white;
+    font-size:58px;
+    font-weight:800;
+    margin-bottom:15px;
+    text-shadow:0 5px 20px rgba(0,0,0,0.7);
+}
+
+.banner span{
+    color:#ffd700;
+}
+
+.banner p{
+    color:#fff;
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+/* BUTTON */
+
+.btn-custom{
+    display:inline-block;
+    background:linear-gradient(135deg,#ffd700,#ffb300);
+    color:#7a0000;
+    padding:14px 34px;
+    border-radius:35px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);
+    transition:0.3s;
+}
+
+.btn-custom:hover{
+    background:white;
+    color:#b30000;
+    transform:translateY(-3px);
+}
+
+/* CARDS */
+
+.home-cards{
+    max-width:1150px;
+    width:100%;
+    margin-top:60px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.home-card{
+    background:rgba(255,255,255,0.97);
+
+    border-radius:22px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border:2px solid rgba(255,215,0,0.6);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.35),
+    0 0 20px rgba(255,215,0,0.15);
+
+    transition:0.4s;
+}
+
+.home-card:hover{
+    transform:translateY(-10px);
+}
+
+.home-card h3{
+    color:#7a0000;
+    font-size:30px;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.home-card p{
+    color:#444;
+    font-size:15px;
+    line-height:1.8;
+    min-height:65px;
+}
+
+.home-card a{
+    display:inline-block;
+
+    margin-top:18px;
+
+    background:linear-gradient(135deg,#7a0000,#b30000);
+
+    color:white;
+
+    padding:11px 24px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:0.3s;
+}
+
+.home-card a:hover{
+    background:#ffd700;
+    color:#7a0000;
+}
+
+.translator-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* GOOGLE TRANSLATE */
+.goog-te-gadget {
+    font-size: 0 !important;
+}
+
+.goog-te-gadget-simple {
+    background: #fff !important;
+    border: none !important;
+    border-radius: 30px !important;
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+    cursor: pointer;
+}
+
+/* HIDE GOOGLE LOGO */
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget span {
+    display: none !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+}
+
+/* MOBILE VIEW */
+
+@media(max-width:768px){
+
+    .navbar{
+        height:70px;
+        padding:8px 12px;
+    }
+
+    .nav-left{
+        gap:2px;
+    }
+
+    .site-logo{
+        width:58px;
+        height:58px;
+        transform:scale(1.3);
+    }
+
+    .title{
+        font-size:15px;
+        font-weight:800;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:30px;
+        color:#fff;
+        cursor:pointer;
+        z-index:10001;
+    }
+
+    .menu{
+        display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        width:100%;
+        background:#fff;
+        flex-direction:column;
+        gap:0;
+        margin:0;
+        z-index:10000;
+    }
+
+    .menu.active{
+        display:flex;
+    }
+
+    .menu a{
+        color:#7a0000;
+        padding:16px;
+        border-bottom:1px solid #ddd;
+        text-align:center;
+        font-size:16px;
+        font-weight:700;
+    }
+
+   lang-select{
+    background:#7a0000;
+    color:#ffd700;
+    border:1px solid #ffd700;
+    border-radius:6px;
+    padding:6px 10px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    outline:none;
+}
+
+.lang-select option{
+    background:#7a0000;
+    color:#ffd700;
+}
+    .banner{
+        padding:100px 15px 40px;
+    }
+
+    .banner h1{
+        font-size:34px;
+        line-height:1.4;
+    }
+
+    .banner p{
+        font-size:15px;
+    }
+
+    .home-cards{
+        grid-template-columns:1fr;
+        margin-top:35px;
+    }
+
+    .home-card{
+        padding:28px 20px;
+    }
+
+    .home-card h3{
+        font-size:24px;
+    }
+     .translator-box{
+        width:100%;
+        justify-content:flex-end;
+        margin-top:5px;
+    }
+
+    .goog-te-gadget-simple{
+        padding:5px 10px !important;
+        font-size:12px !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="nav-left">
+        <img src="images/ganpati.png" class="site-logo" alt="Ganpati Logo">
+        <div class="title notranslate">आनंदी वधुवर सूचक</div>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="menu">
+        <a href="about.html">About</a>
+        <a href="bridepage.html">Bride</a>
+        <a href="groompage.html">Groom</a>
+        <a href="remarriage.html">Remarriage</a>
+        <a href="contact.html">Contact us</a>
+
+        <select id="languageSelect" class="lang-select" onchange="changeLanguage(this.value)">
+            <option value="mr">मराठी</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+
+</div>
+
+<div class="banner">
+  <div>
+    <h1 data-mr="तुमचा परफेक्ट जीवनसाथी शोधा"
+    data-en="Find Your Perfect Soulmate">
+    तुमचा परफेक्ट जीवनसाथी शोधा
+</h1>
+   <p data-mr="विश्वासार्ह मराठी वधुवर सूचक सेवा"
+   data-en="Reliable Marathi Bride Information Service">
+   विश्वासार्ह मराठी वधुवर सूचक सेवा
+</p>
+ <a class="btn-custom"
+   data-mr="आजच नोंदणी करा"
+   data-en="Register Now"
+   href="https://wa.me/7558319213?text=Namaskar%2C%20mala%20Anandi%20Vadhuvar%20Suchak%20Kendra%20madhe%20registration%20karaychi%20aahe."
+   target="_blank">
+   आजच नोंदणी करा
+</a>
+
+     </div>
+
+  <section class="home-cards">
+
+    <div class="home-card">
+        <h3 data-mr="वधू शोधा" data-en="Find Bride">वधू शोधा</h3>
+
+       <p data-mr="आमच्या पडताळणी केलेल्या वधू-वर प्रोफाइलमधून योग्य जीवनसाथी शोधा."
+   data-en="Discover your perfect life partner from our verified profiles.">
+   आमच्या पडताळणी केलेल्या वधू-वर प्रोफाइलमधून योग्य जीवनसाथी शोधा.
+</p>
+
+        <a href="bridepage.html"
+           data-mr="प्रोफाइल पहा"
+           data-en="Explore Profiles">
+           प्रोफाइल पहा
+        </a>
+    </div>
+
+    <div class="home-card">
+        <h3 data-mr="वर शोधा" data-en="Find Groom">वर शोधा</h3>
+
+        <p data-mr="सुशिक्षित आणि सुसंस्कृत वरांच्या प्रोफाइलमधून योग्य जुळणी करा."
+   data-en="Connect with eligible grooms from respected families and backgrounds.">
+   सुशिक्षित आणि सुसंस्कृत वरांच्या प्रोफाइलमधून योग्य जुळणी करा.
+</p>
+
+        <a href="groompage.html"
+           data-mr="जुळणी पहा"
+           data-en="View Matches">
+           जुळणी पहा
+        </a>
+    </div>
+
+    <div class="home-card">
+        <h3 data-mr="पुनर्विवाह" data-en="Remarriage">पुनर्विवाह</h3>
+
+        <p data-mr="नवीन सुरुवातीसाठी समजूतदार आणि योग्य जीवनसाथीचा शोध घ्या."
+           data-en="Find compatible partners for a fresh start and a happy future together.">
+           नवीन सुरुवातीसाठी समजूतदार आणि योग्य जीवनसाथीचा शोध घ्या.
+        </p>
+
+        <a href="remarriage.html"
+           data-mr="सुरुवात करा"
+           data-en="Start Journey">
+           सुरुवात करा
+        </a>
+    </div>
+
+</section>
+</div>
+
+<script>
+
+function toggleMenu() {
+    document.querySelector(".menu").classList.toggle("active");
+}
+
+function changeLanguage(lang) {
+    document.querySelectorAll("[data-mr][data-en]").forEach(function(el) {
+        el.innerText = el.getAttribute("data-" + lang);
+    });
+
+    // mobile menu close
+    document.querySelector(".menu").classList.remove("active");
+}
+</script>
+
+</body>
+</html>
