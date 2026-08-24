@@ -115,5 +115,70 @@
     "height": "5.7 inche",
     "birthyear": 1995,
     "education": "DEE , BA (Economic) ,BBA"
+  },
+  {
+    "arn": "ARN000010",
+    "id": "ARN000010",
+    "profile": "Groom (वर)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Maratha",
+    "photo": "",
+    "name": "Vinayak  Tanaji  Patil",
+    "height": "5 ft 11 inch",
+    "birthyear": 1996,
+    "education": "B.com"
+  },
+  {
+    "arn": "ARN000011",
+    "id": "ARN000011",
+    "profile": "Bride (वधू)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Hindu - vaishya wani",
+    "photo": "",
+    "name": "Rutuja Ramesh Telang",
+    "height": "5 feet",
+    "birthyear": 2001,
+    "education": "B.COM"
+  },
+  {
+    "arn": "ARN000012",
+    "id": "ARN000012",
+    "profile": "Groom (वर)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Hindu- Maratha ( 96 kuli)",
+    "photo": "",
+    "name": "Shubham Bhimrao Patil",
+    "height": "5 feet 4 inch",
+    "birthyear": 2000,
+    "education": "D PHARMACY"
+  },
+  {
+    "arn": "ARN000013",
+    "id": "ARN000013",
+    "profile": "Groom (वर)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Hindu Brahman",
+    "photo": "",
+    "name": "Dipak Sharad Joshi",
+    "height": "5'6\"",
+    "birthyear": 1995,
+    "education": "BE Mechanical"
+  },
+  {
+    "arn": "ARN000014",
+    "id": "ARN000014",
+    "profile": "Bride (वधू)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Vaishya wani",
+    "photo": "",
+    "name": "Rutuja  Ramesh Telang",
+    "height": "5 feet 2 inch",
+    "birthyear": 2001,
+    "education": "B.com"
   }
 ]
