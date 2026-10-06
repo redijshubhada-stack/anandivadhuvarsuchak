@@ -232,5 +232,18 @@
     "height": "5 ft 9 inch",
     "birthyear": 1999,
     "education": "12th"
+  },
+  {
+    "arn": "ARN000019",
+    "id": "ARN000019",
+    "profile": "Groom (वर)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Hindu visya waani",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1791260491/profiles/ARN000019.jpg",
+    "name": "Aniket Jagannath  Kankekar",
+    "height": "5 ft 2in",
+    "birthyear": 1993,
+    "education": "Electrician  M A"
   }
 ]
