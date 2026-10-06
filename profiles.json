@@ -180,5 +180,57 @@
     "height": "5 feet 2 inch",
     "birthyear": 2001,
     "education": "B.com"
+  },
+  {
+    "arn": "ARN000015",
+    "id": "ARN000015",
+    "profile": "Bride (वधू)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Marath",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1791258040/profiles/ARN000015.jpg",
+    "name": "Pradnya  Suresh Patil",
+    "height": "5 feet",
+    "birthyear": 1999,
+    "education": "B.com m b a"
+  },
+  {
+    "arn": "ARN000016",
+    "id": "ARN000016",
+    "profile": "Bride (वधू)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Vaishy vani",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1791258043/profiles/ARN000016.jpg",
+    "name": "Indira Motiram Natekar",
+    "height": "5 feet 4 inch",
+    "birthyear": 1989,
+    "education": "Msc . B.ed"
+  },
+  {
+    "arn": "ARN000017",
+    "id": "ARN000017",
+    "profile": "Bride (वधू)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Hindu Vaishyawani",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1791258046/profiles/ARN000017.jpg",
+    "name": "Dipali Pradip Bobhate",
+    "height": "5 ft 2 inch",
+    "birthyear": 1999,
+    "education": "Graduation"
+  },
+  {
+    "arn": "ARN000018",
+    "id": "ARN000018",
+    "profile": "Groom (वर)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Hindu Vaishyawani",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1791258048/profiles/ARN000018.jpg",
+    "name": "Darshan Dattatray Kankekar",
+    "height": "5 ft 9 inch",
+    "birthyear": 1999,
+    "education": "12th"
   }
 ]
