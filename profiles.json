@@ -258,5 +258,18 @@
     "height": "5 ft 4 inch",
     "birthyear": 1994,
     "education": "Graduation "
+  },
+  {
+    "arn": "ARN000021",
+    "id": "ARN000021",
+    "profile": "Groom (वर)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Hindu-maratha",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1792935860/profiles/ARN000021.jpg",
+    "name": "Vinayak  Tanaji  Patil",
+    "height": "5 ft 11 inch",
+    "birthyear": 1996,
+    "education": "B.com"
   }
 ]
