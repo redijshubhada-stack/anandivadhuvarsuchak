@@ -271,5 +271,18 @@
     "height": "5 ft 11 inch",
     "birthyear": 1996,
     "education": "B.com"
+  },
+  {
+    "arn": "ARN000022",
+    "id": "ARN000022",
+    "profile": "Bride (वधू)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Vaishya vani",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1792936126/profiles/ARN000022.jpg",
+    "name": "Namrata Kishor Lad",
+    "height": "5ft /3in",
+    "birthyear": 2002,
+    "education": "B.A"
   }
 ]
