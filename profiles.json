@@ -284,5 +284,18 @@
     "height": "5ft /3in",
     "birthyear": 2002,
     "education": "B.A"
+  },
+  {
+    "arn": "ARN000023",
+    "id": "ARN000023",
+    "profile": "Groom (वर)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Maratha",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1793386136/profiles/ARN000023.jpg",
+    "name": "Prasad  Narayan Patil",
+    "height": "5ft/8in",
+    "birthyear": 1996,
+    "education": "B.E MECHANICAL "
   }
 ]
