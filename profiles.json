@@ -336,5 +336,18 @@
     "height": "5ft /11in",
     "birthyear": 1996,
     "education": "B.E Machanical "
+  },
+  {
+    "arn": "ARN000027",
+    "id": "ARN000027",
+    "profile": "Bride (वधू)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Sutar",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1793430377/profiles/ARN000027.jpg",
+    "name": "Shamal  Namdev  Sutar",
+    "height": "5ft /4in",
+    "birthyear": 1994,
+    "education": "B.com "
   }
 ]
