@@ -323,5 +323,18 @@
     "height": "5ft/7in",
     "birthyear": 1991,
     "education": "12 th Commerce, ITI FITTER "
+  },
+  {
+    "arn": "ARN000026",
+    "id": "ARN000026",
+    "profile": "Groom (वर)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Hindu Maratha 96 kuli ",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1793429696/profiles/ARN000026.jpg",
+    "name": "Anirudha Appaso Abdar (Patil )",
+    "height": "5ft /11in",
+    "birthyear": 1996,
+    "education": "B.E Machanical "
   }
 ]
