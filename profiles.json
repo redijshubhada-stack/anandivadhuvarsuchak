@@ -349,5 +349,18 @@
     "height": "5ft /4in",
     "birthyear": 1994,
     "education": "B.com "
+  },
+  {
+    "arn": "ARN000028",
+    "id": "ARN000028",
+    "profile": "Groom (वर)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Hindu Maratha 96 kuli ",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1793435066/profiles/ARN000028.jpg",
+    "name": "Pratik  Bhagwan  Patil",
+    "height": "5ft/10in",
+    "birthyear": 1993,
+    "education": "B.Farm"
   }
 ]
