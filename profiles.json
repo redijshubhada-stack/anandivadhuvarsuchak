@@ -310,5 +310,18 @@
     "height": "5ft /8in",
     "birthyear": 1995,
     "education": "B.sc (chemistry)"
+  },
+  {
+    "arn": "ARN000025",
+    "id": "ARN000025",
+    "profile": "Groom (वर)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Maratha 96 kuli",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1793429042/profiles/ARN000025.jpg",
+    "name": "Arjun  Ramchandra  Patil",
+    "height": "5ft/7in",
+    "birthyear": 1991,
+    "education": "12 th Commerce, ITI FITTER "
   }
 ]
