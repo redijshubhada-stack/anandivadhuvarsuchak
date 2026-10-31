@@ -297,5 +297,18 @@
     "height": "5ft/8in",
     "birthyear": 1996,
     "education": "B.E MECHANICAL "
+  },
+  {
+    "arn": "ARN000024",
+    "id": "ARN000024",
+    "profile": "Groom (वर)",
+    "remarriage": "No",
+    "remarriageDetails": "",
+    "caste": "Hindu Maratha",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1793428601/profiles/ARN000024.jpg",
+    "name": "Pramod  Ramchandra  Patil",
+    "height": "5ft /8in",
+    "birthyear": 1995,
+    "education": "B.sc (chemistry)"
   }
 ]
