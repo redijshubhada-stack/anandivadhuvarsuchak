@@ -362,5 +362,18 @@
     "height": "",
     "birthyear": "",
     "education": ""
+  },
+  {
+    "arn": "ARN000029",
+    "id": "ARN000029",
+    "profile": "Bride (वधू)",
+    "remarriage": "Yes",
+    "remarriageDetails": "",
+    "caste": "Hindu",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1793435252/profiles/ARN000029.jpg",
+    "name": "Shubh Sudhir Patil",
+    "height": "",
+    "birthyear": "",
+    "education": ""
   }
 ]
