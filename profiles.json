@@ -349,5 +349,18 @@
     "height": "5ft /4in",
     "birthyear": 1994,
     "education": "B.com "
+  },
+  {
+    "arn": "ARN000028",
+    "id": "ARN000028",
+    "profile": "Bride (वधू)",
+    "remarriage": "Yes",
+    "remarriageDetails": "",
+    "caste": "Hindu",
+    "photo": "https://res.cloudinary.com/dfasgr6hd/image/upload/v1793435066/profiles/ARN000028.jpg",
+    "name": "Gudi Sumit Jadhav",
+    "height": "",
+    "birthyear": "",
+    "education": ""
   }
 ]
